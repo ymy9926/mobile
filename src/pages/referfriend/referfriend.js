@@ -1,7 +1,7 @@
 /* eslint-disable */
 import 'amfe-flexible'
 import '../../common/css/base.less';
-import './parents.less'
+import './referfriend.less'
 
 function sign() {
     var email = document.querySelector('#txt_email');
