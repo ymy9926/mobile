@@ -34,5 +34,15 @@ module.exports = [
     name: 'parents',
     html: 'parents/parents.html',
     jsEntry: 'parents/parents.js'
+  }, {
+    name: 'methodology',
+    html: 'methodology/methodology.html',
+    jsEntry: 'methodology/methodology.js'
+  }, {
+    name: 'referfriend',
+    html: 'referfriend/referfriend.html',
+    jsEntry: 'referfriend/referfriend.js'
   }
+
+
 ]

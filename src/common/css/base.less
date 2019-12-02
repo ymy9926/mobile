@@ -185,19 +185,22 @@ em {
         .lg-btn {
             position     : absolute;
             display      : inline-block;
-            left         : .4rem;
-            bottom       : 2.666667rem;
-            height       : 1.066667rem;
-            width        : 3.466667rem;
-            line-height  : 1.066667rem;
+            height       : 1.173333rem;
+            line-height  : 1.173333rem;
             border-radius: .106667rem;
             background   : #fff;
             font-size    : .32rem;
             text-align   : center;
             color        : #4E4F69;
-            border       : .053333rem solid #4E4F69;
+            z-index      : 100;
+            background   : #fff;
+            padding      : 0 .533333rem;
+            box-sizing   : border-box;
 
-
+            &.lg-btn1 {
+                border: .053333rem solid #4E4F69;
+            }
         }
+
     }
 }
