@@ -34,6 +34,21 @@ module.exports = [
     name: 'parents',
     html: 'parents/parents.html',
     jsEntry: 'parents/parents.js'
+  },
+  {
+    name: 'login',
+    html: 'login/login.html',
+    jsEntry: 'login/login.js'
+  },
+  {
+    name: 'teacher',
+    html: 'teacher/teacher.html',
+    jsEntry: 'teacher/teacher.js'
+  },
+  {
+    name: 'studentexp',
+    html: 'studentexp/studentexp.html',
+    jsEntry: 'studentexp/studentexp.js'
   }, {
     name: 'methodology',
     html: 'methodology/methodology.html',
