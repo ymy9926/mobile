@@ -15,6 +15,7 @@
   "license": "MIT",
   "dependencies": {
     "@babel/polyfill": "^7.6.0",
+    "amfe-flexible": "^2.2.1",
     "normalize.css": "^8.0.0"
   },
   "devDependencies": {
