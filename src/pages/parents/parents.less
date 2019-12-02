@@ -3,6 +3,67 @@
     bottom: 2.666667rem;
 }
 
+header {
+    box-sizing: border-box;
+    height    : 1.173333rem;
+    display   : flex;
+    padding   : .173333rem .4rem;
+
+    .logo {
+        flex: 1;
+
+        img {
+            height        : .8rem;
+            vertical-align: top;
+        }
+    }
+
+    .lg-icon-close {
+        flex                 : 0 1.173333rem;
+        display              : inline-block;
+        background-size      : .488rem .488rem;
+        background-position-x: right;
+        background-image     : url('../../images/header/close.png');
+    }
+
+    .lg-menu {
+        display   : block;
+        position  : fixed;
+        left      : 0;
+        top       : 1.6rem;
+        width     : 100%;
+        height    : 150%;
+        z-index   : 1000;
+        text-align: center;
+        background: #fff;
+
+        li {
+            a {
+                font-size  : .426667rem;
+                display    : block;
+                height     : 50px;
+                line-height: 1.333333rem;
+                color      : #37384C;
+            }
+        }
+    }
+
+    footer {
+        height  : 1.173333rem;
+        position: absolute;
+        left    : .4rem;
+        bottom  : .8rem;
+
+        button {
+            width    : 4.4rem;
+            height   : 1.173333rem;
+            font-size: .373333rem;
+            color    : #56BECD;
+        }
+    }
+
+}
+
 .sign {
     box-sizing: border-box;
 
