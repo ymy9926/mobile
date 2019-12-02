@@ -1,4 +1,4 @@
 /* eslint-disable */
 import 'amfe-flexible'
 import '../../common/css/base.less';
-import './login.less'
+import './phone.less'

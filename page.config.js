@@ -49,15 +49,23 @@ module.exports = [
     name: 'studentexp',
     html: 'studentexp/studentexp.html',
     jsEntry: 'studentexp/studentexp.js'
-  }, {
+  }, 
+  {
     name: 'methodology',
     html: 'methodology/methodology.html',
     jsEntry: 'methodology/methodology.js'
-  }, {
+  }, 
+  {
     name: 'referfriend',
     html: 'referfriend/referfriend.html',
     jsEntry: 'referfriend/referfriend.js'
+  },
+  {
+    name: 'phone',
+    html: 'phone/phone.html',
+    jsEntry: 'phone/phone.js'
   }
+
 
 
 ]
