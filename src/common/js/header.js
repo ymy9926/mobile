@@ -118,6 +118,17 @@ import logo from '../../images/header/move_headerlogo_03.png'
         document.documentElement.style.overflow = "scroll"
         document.removeEventListener("touchmove",()=> e.preventDefault(),false)
     }
+
+    window.showRegister = function () {
+        document.querySelector(".masklogin").style.display = "block"
+        document.querySelector(".masklogin").innerHTML = registerhtml
+        document.querySelector(".close img").onclick = function () {
+            document.querySelector(".masklogin").style.display = "none"
+        }
+        document.querySelector(".login").onclick = function () {
+            showLogin()
+        }
+    }
     
     // document.querySelector(".register").onclick = showRegister;
 
@@ -137,17 +148,6 @@ import logo from '../../images/header/move_headerlogo_03.png'
             isRememberUser ? this.setAttribute("src", remember) : this.setAttribute("src", no_remember)
         }
 
-    }
-
-    window.showRegister = function () {
-        document.querySelector(".masklogin").style.display = "block"
-        document.querySelector(".masklogin").innerHTML = registerhtml
-        document.querySelector(".close img").onclick = function () {
-            document.querySelector(".masklogin").style.display = "none"
-        }
-        document.querySelector(".login").onclick = function () {
-            showLogin()
-        }
     }
 
 })(window);
