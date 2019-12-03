@@ -33,7 +33,7 @@ import logo from '../../images/header/move_headerlogo_03.png'
                 </div>`;
     //登录
     var signinhtml = `
-    <form class="masksign" action="https://member.lingoace.com/accounts/login/" method="POST" id="login" >
+    <form class="masksign" action="https://dev.pplingo.com/accounts/login/" method="POST" id="login" >
     <p class="sgintitle"><span class="close"><img src="${close}" /></span><span>Login</span><span class="signup">Sign up</span></p>
     <p class="emailipt"><input type="text" class="username"  name="login" placeholder="Username"><span class="emailtextnone"></span></p>
     <p class="emailwrong">The account password is wrong or does not exist</p>
@@ -45,20 +45,20 @@ import logo from '../../images/header/move_headerlogo_03.png'
             <span>Remember me</span>
         </p>
             
-        <p class="forgotpassword"><a href="https://member.lingoace.com/accounts/password/reset/" target="_blank">Forgot Password?</a></p>
+        <p class="forgotpassword"><a href="https://dev.pplingo.com/accounts/password/reset/" target="_blank">Forgot Password?</a></p>
     </div>
-    <p class="loginbtn loginjump">Login</p>
+    <button type="submit" class="loginbtn loginjump">Login</button>
     </form>
     `
 
     //注册
-    var registerhtml = `<form class="masksign" action="https://member.lingoace.com/accounts/signup/" id="signup_form" method="post">
+    var registerhtml = `<form class="masksign" action="https://dev.pplingo.com/accounts/signup/" id="signup_form" method="post">
     <p class="sgintitle"><span class="close"><img src="${close}" /></span><span>Sign up</span><span class="login">Login</span></p>
     <p class="usernameipt"><input type="text" class="username" name="username" placeholder="Username"><span class="emailtextnone usernamepic"></span></p>
     <p class="emailipt"><input type="text" class="email" name="email" placeholder="Email"><span class="emailtextnone emailpic"></span></p>
     <p class="passwordipt"><input class="passwordinput" type="password" name="password1" placeholder="Password"><img class="paswordnone" src="" alt=""></p>
     <input type="hidden" name="password2" class="password2" />
-    <p class="loginbtn registerbtn">Sign up</p>
+    <button type="submit" class="loginbtn registerbtn">Sign up</button>
     <div class="gotomethod">
         <span class="text">By Signing up,you hereby agree to</span><span class="jump Lawsandregulations"> LingoAce Course Agreement /Terms of Use</span><span class="text"> and </span><span class="jump Lawsandregulations">Privacy Policy</span>
     </div>
@@ -101,12 +101,14 @@ import logo from '../../images/header/move_headerlogo_03.png'
     }
 
     var isRememberUser = true
+    // var url = window.location.pathname.join('/').
 
     document.querySelector(".lg-icon-menu").onclick = function () {
         this.style.display = "none"
         document.querySelector(".lg-icon-close").style.display = "inline-block"
         document.querySelector(".menu").style.display = "inline-block"
-        document.documentElement.style.overflow = "hidden"
+        document.body.style.overflow = "hidden"
+        document.addEventListener("touchmove",()=> e.preventDefault(),false)
     }
 
     document.querySelector(".lg-icon-close").onclick = function () {
@@ -114,17 +116,15 @@ import logo from '../../images/header/move_headerlogo_03.png'
         document.querySelector(".lg-icon-menu").style.display = "inline-block"
         document.querySelector(".menu").style.display = "none"
         document.documentElement.style.overflow = "scroll"
+        document.removeEventListener("touchmove",()=> e.preventDefault(),false)
     }
+    
+    // document.querySelector(".register").onclick = showRegister;
 
-
-    document.querySelector(".btn-login").onclick = function() {
-        showLogin()
-    }
-
-    document.querySelector(".btn-register").onclick = showRegister
+    document.querySelector(".btn-login").onclick = showLogin;
+    document.querySelector(".btn-register").onclick = showRegister;
 
     function showLogin() {
-        console.log("111111")
         document.querySelector(".masklogin").style.display = "block"
         document.querySelector(".masklogin").innerHTML = signinhtml
         document.querySelector(".close img").onclick = function () {
@@ -139,7 +139,7 @@ import logo from '../../images/header/move_headerlogo_03.png'
 
     }
 
-    function showRegister() {
+    window.showRegister = function () {
         document.querySelector(".masklogin").style.display = "block"
         document.querySelector(".masklogin").innerHTML = registerhtml
         document.querySelector(".close img").onclick = function () {
