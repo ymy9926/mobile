@@ -13,8 +13,8 @@
             <li></li>
         </ul>
         <ul class="footer-menus">
-            <li><a href=""><i></i> Contact Us</a></li>
-            <li><a href=""><i></i> Terms &amp; Conditions</a></li>
+            <li><a href="./contactus.html"><i></i> Contact Us</a></li>
+            <li><a href="./rule.html"><i></i> Terms &amp; Conditions</a></li>
         </ul>
         <p class="copy">Copyright © 2019 LingoAce</p>
     `;
