@@ -83,7 +83,6 @@ import logo from '../../images/header/move_headerlogo_03.png'
     }
 
 
-    document.querySelector("#btn-sign").onclick = sign;
     document.querySelector(".btn-login").onclick = function() {
         showLogin()
     }
@@ -91,6 +90,7 @@ import logo from '../../images/header/move_headerlogo_03.png'
     document.querySelector(".btn-register").onclick = showRegister
 
     function showLogin() {
+        console.log("111111")
         document.querySelector(".masklogin").style.display = "block"
         document.querySelector(".masklogin").innerHTML = signinhtml
         document.querySelector(".close img").onclick = function() {
