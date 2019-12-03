@@ -2,16 +2,13 @@
 import axios from 'axios'
 import '../../common/js/layer_mobile/need/layer.css'
 import '../../common/js/layer_mobile/layer.js'
-(function (window) {
-    var html = `<span>顶部</span>`;
-    var header = document.createElement('header');
-    header.innerHTML = html;
 import close from '../../images/header/close.png'
 import no_remember from '../../images/header/remmber.png'
 import remember from '../../images/header/remmbersel.png'
 import logo from '../../images/header/move_headerlogo_03.png'
 
-(function () {
+(function (window) {
+
     var html = `<header>
                     <div class="masklogin"></div>
                     <a href="###" class="logo">
@@ -36,7 +33,7 @@ import logo from '../../images/header/move_headerlogo_03.png'
                     </div>
                 </div>`;
     //登录
-    var signinhtml=`
+    var signinhtml = `
     <form class="masksign" action="https://member.lingoace.com/accounts/login/" method="POST" id="login" >
     <p class="sgintitle"><span class="close"><img src="${close}" /></span><span>Login</span><span class="signup">Sign up</span></p>
     <p class="emailipt"><input type="text" class="username"  name="login" placeholder="Username"><span class="emailtextnone"></span></p>
@@ -56,7 +53,7 @@ import logo from '../../images/header/move_headerlogo_03.png'
     `
 
     //注册
-    var registerhtml=`<form class="masksign" action="https://member.lingoace.com/accounts/signup/" id="signup_form" method="post">
+    var registerhtml = `<form class="masksign" action="https://member.lingoace.com/accounts/signup/" id="signup_form" method="post">
     <p class="sgintitle"><span class="close"><img src="${close}" /></span><span>Sign up</span><span class="login">Login</span></p>
     <p class="usernameipt"><input type="text" class="username" name="username" placeholder="Username"><span class="emailtextnone usernamepic"></span></p>
     <p class="emailipt"><input type="text" class="email" name="email" placeholder="Email"><span class="emailtextnone emailpic"></span></p>
@@ -103,41 +100,35 @@ import logo from '../../images/header/move_headerlogo_03.png'
         }
 
     }
-})(window);
+
     var isRememberUser = true
 
-    document.querySelector(".lg-icon-menu").onclick = function() {
+    document.querySelector(".lg-icon-menu").onclick = function () {
         this.style.display = "none"
         document.querySelector(".lg-icon-close").style.display = "inline-block"
         document.querySelector(".menu").style.display = "inline-block"
-        document.documentElement.style.overflow="hidden"
+        document.documentElement.style.overflow = "hidden"
     }
 
-    document.querySelector(".lg-icon-close").onclick = function() {
+    document.querySelector(".lg-icon-close").onclick = function () {
         this.style.display = "none"
         document.querySelector(".lg-icon-menu").style.display = "inline-block"
         document.querySelector(".menu").style.display = "none"
-        document.documentElement.style.overflow="scroll"
+        document.documentElement.style.overflow = "scroll"
     }
 
-
-    document.querySelector("#btn-sign").onclick = sign;
-    document.querySelector(".btn-login").onclick = function() {
-        showLogin()
-    }
-
-    document.querySelector(".btn-register").onclick = showRegister
+    document.querySelector(".btn-login").onclick = showLogin;
+    document.querySelector(".btn-register").onclick = showRegister;
 
     function showLogin() {
         document.querySelector(".masklogin").style.display = "block"
         document.querySelector(".masklogin").innerHTML = signinhtml
-        document.querySelector(".close img").onclick = function() {
+        document.querySelector(".close img").onclick = function () {
             document.querySelector(".masklogin").style.display = "none"
         }
-        document.querySelector(".signup").onclick = function() {
-            showRegister()
-        }
-        document.querySelector(".pasword p img").onclick = function() {
+        document.querySelector(".signup").onclick = showRegister;
+        
+        document.querySelector(".pasword p img").onclick = function () {
             isRememberUser = !isRememberUser
             isRememberUser ? this.setAttribute("src", remember) : this.setAttribute("src", no_remember)
         }
@@ -147,12 +138,12 @@ import logo from '../../images/header/move_headerlogo_03.png'
     function showRegister() {
         document.querySelector(".masklogin").style.display = "block"
         document.querySelector(".masklogin").innerHTML = registerhtml
-        document.querySelector(".close img").onclick = function() {
+        document.querySelector(".close img").onclick = function () {
             document.querySelector(".masklogin").style.display = "none"
         }
-        document.querySelector(".login").onclick = function() {
+        document.querySelector(".login").onclick = function () {
             showLogin()
         }
     }
 
-})();
+})(window);
