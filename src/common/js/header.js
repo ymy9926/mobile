@@ -1,5 +1,4 @@
 /* eslint-disable */
-import axios from 'axios'
 import '../../common/js/layer_mobile/need/layer.css'
 import '../../common/js/layer_mobile/layer.js'
 import close from '../../images/header/close.png'
@@ -117,17 +116,12 @@ import logo from '../../images/header/move_headerlogo_03.png'
         document.documentElement.style.overflow = "scroll"
     }
 
-<<<<<<< HEAD
-    document.querySelector(".btn-login").onclick = showLogin;
-    document.querySelector(".btn-register").onclick = showRegister;
-=======
 
     document.querySelector(".btn-login").onclick = function() {
         showLogin()
     }
 
     document.querySelector(".btn-register").onclick = showRegister
->>>>>>> 3bd690b49c704e47c88b5dab0d81f0ff9d280dea
 
     function showLogin() {
         console.log("111111")
