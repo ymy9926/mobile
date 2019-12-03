@@ -306,3 +306,223 @@ footer {
     }
 
 }
+
+header {
+    box-sizing: border-box;
+    height    : 1.173333rem;
+    display   : flex;
+    padding   : .173333rem .4rem;
+    .logo {
+        flex: 1;
+
+        img {
+            height        : .8rem;
+            vertical-align: top;
+        }
+    }
+
+    .masklogin, .maskregister{
+        width:100%;
+        height:100%;
+        position:fixed;
+        top:0;
+        left:0;
+        background:rgba(0,0,0,.3);
+        display:none;
+        z-index:9999;
+        display: none;
+        .masksign {
+            margin: 2rem auto 0;
+            width: 90%;
+            background: #fff;
+            border-radius: .266667rem;
+            padding-bottom: 1rem;
+            .close img{
+                width: .4rem;
+                height: .4rem;
+            }
+            .emailipt, .passwordipt, .usernameipt {
+                width: 90%;
+                margin: 0 auto;
+                height: 1.5rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 2px solid #999;
+            }
+            .pasword {
+                display: flex;
+                width: 90%;
+                margin: 0 auto;
+                justify-content: space-between;
+                align-items: center;
+                height: 1.3rem;
+                font-size: .373333rem;
+            }
+            .sgintitle{
+                width:100%;
+                height:2rem;
+                display:flex;
+                justify-content: space-between;
+                align-items:center;
+            }
+            .sgintitle span{
+                width:30%;
+                text-align:center;
+            }
+            .sgintitle :nth-child(2){
+                font-size:.74rem;
+                color:#d78f25;
+                font-family:"Comfortaa";
+            }
+            .sgintitle :nth-child(3){
+                font-size:.44rem;
+                color:#6e70a0;
+                font-family:"Rubik";
+            }
+            .emailwrong,.passwordwrong{
+                display:none;
+                color:#eb532f;
+            }
+            .emailwrong{
+                width:80%;
+                margin:0 auto;
+                color:#eb532f;
+                font-size:12px;
+                line-height:15px;
+                display:none;
+            }
+            .passwordwrong{
+                width:80%;
+                margin:0 auto;
+                color:#eb532f;
+                font-size:12px;
+                line-height:15px;
+                display:none;
+            }
+            .loginbtn {
+                width: 90%;
+                margin: 0 auto;
+                height: 1.2rem;
+                background: #6e70a0;
+                color: #fff;
+                border-radius: .1rem;
+                line-height: 1.2rem;
+                text-align: Center;
+                font-size: .52rem;
+                font-family: "Rubik";
+                margin-top: .5rem;
+                margin-bottom: .5rem;
+            }
+            .gotomethod {
+                width: 90%;
+                margin: 0 auto;
+                color: #999;
+                line-height: .7rem;
+                font-size: .346667rem;
+            }
+            .gotomethod .jump{
+                color:#6e70a0;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+    }
+    
+    .lg-icon {
+        flex                 : 0 1.173333rem;
+        display              : inline-block;
+        background-size      : .488rem .488rem;
+        background-position-x: right;
+        display: none;
+    }
+
+    .lg-icon-close {
+        background-image     : url('../../images/header/close.png');
+    }
+
+    .lg-icon-menu {
+        display: inline-block;
+        background-image     : url('../../images/header/move_headermore_03.png');
+    }
+
+
+
+}
+.menu {
+    width     : 100%;
+    height    : 150%;
+    position  : fixed;
+    left      : 0;
+    top       : 1.173333rem;
+    z-index   : 1000;
+    background-image: url('../../images/common/menu-bg.png');
+    background-repeat:  no-repeat;
+    background-size: 100%;
+    display: none;
+    .lg-menu {
+        display   : block;
+        width     : 100%;
+        height    : 100%;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.8);
+
+        li {
+            a {
+                font-size  : .426667rem;
+                display    : block;
+                height     : 50px;
+                line-height: 1.333333rem;
+                color      : #37384C;
+            }
+        }
+    }
+    .btn-box {
+        height  : 1.173333rem;
+        position: absolute;
+        left    : .4rem;
+        top  : 13.466667rem;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+
+        .btn1 {
+            margin-right: .4rem;
+        }
+
+        button {
+            width    : 4.4rem;
+            height   : 1.173333rem;
+            font-size: .373333rem;
+            color    : #56BECD;
+            background: #fff;
+            border-radius: .16rem;
+        }
+        }
+}
+
+
+.sign {
+    box-sizing: border-box;
+
+    input {
+        width        : calc(100% - .8rem);
+        left         : .4rem;
+        bottom       : 2.8rem;
+        height       : 1.066667rem;
+        line-height  : 1.066667rem;
+        padding      : 0 .4rem;
+        position     : absolute;
+        box-sizing   : border-box;
+        border-radius: .106667rem;
+        background   : #EDB361;
+        font-size    : .426667rem;
+        color        : #C37B26;
+    }
+
+    .lg-btn {
+        width : calc(100% - .8rem);
+        left  : .4rem;
+        bottom: 1.333333rem;
+    }
+}

@@ -6,8 +6,70 @@ import '../../common/js/layer_mobile/layer.js'
     var html = `<span>顶部</span>`;
     var header = document.createElement('header');
     header.innerHTML = html;
+import close from '../../images/header/close.png'
+import no_remember from '../../images/header/remmber.png'
+import remember from '../../images/header/remmbersel.png'
+import logo from '../../images/header/move_headerlogo_03.png'
 
+(function () {
+    var html = `<header>
+                    <div class="masklogin"></div>
+                    <a href="###" class="logo">
+                        <img src="${logo}" alt="">
+                    </a>
+                    <i class="lg-icon lg-icon-menu"></i>
+                    <i class="lg-icon lg-icon-close"></i>
+                </header>
+                <div class="menu">
+                    <ul class="lg-menu">
+                        <li><a href="/freeassessment.html">Free Chinese Assessment</a></li>
+                        <li><a href="/methodology.html">The LingoAce Methodology</a></li>
+                        <li><a href="/freeassessment.html">The Student Experience</a></li>
+                        <li><a href="/teacher.html">LingoAce Teachers</a></li>
+                        <li><a href="/difference.html">The LingoAce Difference</a></li>
+                        <li><a href="/parents.html">For Farents</a></li>
+                        <li><a href="/referfriend.html">Refer A Friend</a></li>
+                        <li><a href="/freeassessment.html">Blog</a></li>
+                    </ul>
+                    <div class="btn-box">
+                        <button class="btn1 btn-login">LOGIN</button><button class="btn-register">REGISTER</button>
+                    </div>
+                </div>`;
+    //登录
+    var signinhtml=`
+    <form class="masksign" action="https://member.lingoace.com/accounts/login/" method="POST" id="login" >
+    <p class="sgintitle"><span class="close"><img src="${close}" /></span><span>Login</span><span class="signup">Sign up</span></p>
+    <p class="emailipt"><input type="text" class="username"  name="login" placeholder="Username"><span class="emailtextnone"></span></p>
+    <p class="emailwrong">The account password is wrong or does not exist</p>
+    <p class="passwordipt"><input type="password" name="password" class="passwordinput passwordlogin" placeholder="Password"><img class="paswordnone" src="" alt=""></p>
+    <p class="passwordwrong">The account password is wrong or does not exist</p>
+    <div class="pasword">
+        <p>
+            <img class="paswordnone" src="${remember}" alt="">
+            <span>Remember me</span>
+        </p>
+            
+        <p class="forgotpassword"><a href="https://member.lingoace.com/accounts/password/reset/" target="_blank">Forgot Password?</a></p>
+    </div>
+    <p class="loginbtn loginjump">Login</p>
+    </form>
+    `
 
+    //注册
+    var registerhtml=`<form class="masksign" action="https://member.lingoace.com/accounts/signup/" id="signup_form" method="post">
+    <p class="sgintitle"><span class="close"><img src="${close}" /></span><span>Sign up</span><span class="login">Login</span></p>
+    <p class="usernameipt"><input type="text" class="username" name="username" placeholder="Username"><span class="emailtextnone usernamepic"></span></p>
+    <p class="emailipt"><input type="text" class="email" name="email" placeholder="Email"><span class="emailtextnone emailpic"></span></p>
+    <p class="passwordipt"><input class="passwordinput" type="password" name="password1" placeholder="Password"><img class="paswordnone" src="" alt=""></p>
+    <input type="hidden" name="password2" class="password2" />
+    <p class="loginbtn registerbtn">Sign up</p>
+    <div class="gotomethod">
+        <span class="text">By Signing up,you hereby agree to</span><span class="jump Lawsandregulations"> LingoAce Course Agreement /Terms of Use</span><span class="text"> and </span><span class="jump Lawsandregulations">Privacy Policy</span>
+    </div>
+    </form>`
+
+    var header = document.createElement('div');
+    header.innerHTML = html;
     var layout = document.querySelector('.lg-layout');
     layout.parentNode.insertBefore(header, layout);
 
@@ -42,3 +104,55 @@ import '../../common/js/layer_mobile/layer.js'
 
     }
 })(window);
+    var isRememberUser = true
+
+    document.querySelector(".lg-icon-menu").onclick = function() {
+        this.style.display = "none"
+        document.querySelector(".lg-icon-close").style.display = "inline-block"
+        document.querySelector(".menu").style.display = "inline-block"
+        document.documentElement.style.overflow="hidden"
+    }
+
+    document.querySelector(".lg-icon-close").onclick = function() {
+        this.style.display = "none"
+        document.querySelector(".lg-icon-menu").style.display = "inline-block"
+        document.querySelector(".menu").style.display = "none"
+        document.documentElement.style.overflow="scroll"
+    }
+
+
+    document.querySelector("#btn-sign").onclick = sign;
+    document.querySelector(".btn-login").onclick = function() {
+        showLogin()
+    }
+
+    document.querySelector(".btn-register").onclick = showRegister
+
+    function showLogin() {
+        document.querySelector(".masklogin").style.display = "block"
+        document.querySelector(".masklogin").innerHTML = signinhtml
+        document.querySelector(".close img").onclick = function() {
+            document.querySelector(".masklogin").style.display = "none"
+        }
+        document.querySelector(".signup").onclick = function() {
+            showRegister()
+        }
+        document.querySelector(".pasword p img").onclick = function() {
+            isRememberUser = !isRememberUser
+            isRememberUser ? this.setAttribute("src", remember) : this.setAttribute("src", no_remember)
+        }
+
+    }
+
+    function showRegister() {
+        document.querySelector(".masklogin").style.display = "block"
+        document.querySelector(".masklogin").innerHTML = registerhtml
+        document.querySelector(".close img").onclick = function() {
+            document.querySelector(".masklogin").style.display = "none"
+        }
+        document.querySelector(".login").onclick = function() {
+            showLogin()
+        }
+    }
+
+})();
