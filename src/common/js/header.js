@@ -20,12 +20,12 @@ import logo from '../../images/header/move_headerlogo_03.png'
                     <ul class="lg-menu">
                         <li><a href="/freeassessment.html">Free Chinese Assessment</a></li>
                         <li><a href="/methodology.html">The LingoAce Methodology</a></li>
-                        <li><a href="/freeassessment.html">The Student Experience</a></li>
+                        <li><a href="/studentexp.html">The Student Experience</a></li>
                         <li><a href="/teacher.html">LingoAce Teachers</a></li>
                         <li><a href="/difference.html">The LingoAce Difference</a></li>
                         <li><a href="/parents.html">For Farents</a></li>
                         <li><a href="/referfriend.html">Refer A Friend</a></li>
-                        <li><a href="/freeassessment.html">Blog</a></li>
+                        <li><a href="/login.html">Sign up</a></li>
                     </ul>
                     <div class="btn-box">
                         <button class="btn1 btn-login">LOGIN</button><button class="btn-register">REGISTER</button>
@@ -98,6 +98,17 @@ import logo from '../../images/header/move_headerlogo_03.png'
             console.log('error');
         }
 
+    }
+
+    window.showRegister = function () {
+        document.querySelector(".masklogin").style.display = "block"
+        document.querySelector(".masklogin").innerHTML = registerhtml
+        document.querySelector(".close img").onclick = function () {
+            document.querySelector(".masklogin").style.display = "none"
+        }
+        document.querySelector(".login").onclick = function () {
+            showLogin()
+        }
     }
 
     var isRememberUser = true
