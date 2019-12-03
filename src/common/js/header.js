@@ -107,16 +107,14 @@ import logo from '../../images/header/move_headerlogo_03.png'
         this.style.display = "none"
         document.querySelector(".lg-icon-close").style.display = "inline-block"
         document.querySelector(".menu").style.display = "inline-block"
-        document.body.style.overflow = "hidden"
-        document.addEventListener("touchmove",()=> e.preventDefault(),false)
+        stop();
     }
 
     document.querySelector(".lg-icon-close").onclick = function () {
         this.style.display = "none"
         document.querySelector(".lg-icon-menu").style.display = "inline-block"
         document.querySelector(".menu").style.display = "none"
-        document.documentElement.style.overflow = "scroll"
-        document.removeEventListener("touchmove",()=> e.preventDefault(),false)
+        move();
     }
 
     window.showRegister = function () {
@@ -129,7 +127,7 @@ import logo from '../../images/header/move_headerlogo_03.png'
             showLogin()
         }
     }
-    
+
     // document.querySelector(".register").onclick = showRegister;
 
     document.querySelector(".btn-login").onclick = showLogin;
@@ -142,12 +140,24 @@ import logo from '../../images/header/move_headerlogo_03.png'
             document.querySelector(".masklogin").style.display = "none"
         }
         document.querySelector(".signup").onclick = showRegister;
-        
+
         document.querySelector(".pasword p img").onclick = function () {
             isRememberUser = !isRememberUser
             isRememberUser ? this.setAttribute("src", remember) : this.setAttribute("src", no_remember)
         }
 
+    }
+
+    var mo = function (e) { e.preventDefault(); };
+    function stop() {
+        document.body.style.overflow = 'hidden';
+        document.addEventListener("touchmove", mo, { passive: false });//禁止页面滑动
+    }
+
+    /***取消滑动限制***/
+    function move() {
+        document.body.style.overflow = '';//出现滚动条
+        document.removeEventListener("touchmove", mo, { passive: false });
     }
 
 })(window);
