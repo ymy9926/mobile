@@ -1,3 +1,27 @@
+// @font-face {
+//     font-family: Comfortaa;
+//     src        : url('./fonts/Comfortaa-Regular.ttf');
+//     /* 大标题和人物留言 */
+// }
+
+// @font-face {
+//     font-family: Roboto;
+//     src        : url('./fonts/Roboto-Condensed.ttf');
+//     /* 人物署名字体 */
+// }
+
+@font-face {
+    font-family: Rubik-Medium;
+    src        : url('./fonts/Rubik-Medium.ttf');
+    /* 标题上粗体及按钮粗体文字 */
+}
+
+@font-face {
+    font-family: Rubik;
+    src        : url('./fonts/Rubik-Regular.ttf');
+    /* 描述文字 */
+}
+
 html,
 body,
 ul,
@@ -40,7 +64,7 @@ ol {
 input {
     padding-top   : 0;
     padding-bottom: 0;
-    font-family   : "SimSun", "宋体";
+    font-family   : "Rubik";
 }
 
 select,
@@ -195,10 +219,19 @@ em {
             text-align   : center;
             z-index      : 100;
             box-sizing   : border-box;
+            background   : #fff;
+            border-radius: 6px;
+            line-height  : .426667rem;
+            font-size    : 14px;
+            font-weight  : bold;
+            padding      : .4rem .533333rem;
+            font-family  : Rubik-Medium;
 
             &.lg-btn1 {
                 border: .053333rem solid #4E4F69;
             }
+
+
         }
 
     }

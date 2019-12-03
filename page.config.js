@@ -1,14 +1,14 @@
 /* eslint-disable */
 module.exports = [
   {
-    name: 'index',
-    html: 'home/index.html',
-    jsEntry: 'home/index.js'
+    name: './login.html',
+    html: 'login/login.html',
+    jsEntry: 'login/login.js'
   },
   {
-    name: 'about',
-    html: 'about/about.html',
-    jsEntry: 'about/about.js'
+    name: 'rule',
+    html: 'rule/rule.html',
+    jsEntry: 'rule/rule.js'
   },
   {
     name: 'contact',
@@ -49,21 +49,24 @@ module.exports = [
     name: 'studentexp',
     html: 'studentexp/studentexp.html',
     jsEntry: 'studentexp/studentexp.js'
-  }, 
+  },
   {
     name: 'methodology',
     html: 'methodology/methodology.html',
     jsEntry: 'methodology/methodology.js'
-  }, 
+  },
   {
     name: 'referfriend',
     html: 'referfriend/referfriend.html',
     jsEntry: 'referfriend/referfriend.js'
-  },
-  {
+  }, {
     name: 'phone',
     html: 'phone/phone.html',
     jsEntry: 'phone/phone.js'
+  }, {
+    name: 'contactus',
+    html: 'contactus/contactus.html',
+    jsEntry: 'contactus/contactus.js'
   }
 
 
