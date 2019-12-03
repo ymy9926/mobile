@@ -20,7 +20,7 @@ import logo from '../../images/header/move_headerlogo_03.png'
                     <ul class="lg-menu">
                         <li><a href="/freeassessment.html">Free Chinese Assessment</a></li>
                         <li><a href="/methodology.html">The LingoAce Methodology</a></li>
-                        <li><a href="/freeassessment.html">The Student Experience</a></li>
+                        <li><a href="/studentexp.html">The Student Experience</a></li>
                         <li><a href="/teacher.html">LingoAce Teachers</a></li>
                         <li><a href="/difference.html">The LingoAce Difference</a></li>
                         <li><a href="/parents.html">For Farents</a></li>
@@ -100,6 +100,17 @@ import logo from '../../images/header/move_headerlogo_03.png'
 
     }
 
+    window.showRegister = function () {
+        document.querySelector(".masklogin").style.display = "block"
+        document.querySelector(".masklogin").innerHTML = registerhtml
+        document.querySelector(".close img").onclick = function () {
+            document.querySelector(".masklogin").style.display = "none"
+        }
+        document.querySelector(".login").onclick = function () {
+            showLogin()
+        }
+    }
+
     var isRememberUser = true
     // var url = window.location.pathname.join('/').
 
@@ -139,15 +150,6 @@ import logo from '../../images/header/move_headerlogo_03.png'
 
     }
 
-    window.showRegister = function () {
-        document.querySelector(".masklogin").style.display = "block"
-        document.querySelector(".masklogin").innerHTML = registerhtml
-        document.querySelector(".close img").onclick = function () {
-            document.querySelector(".masklogin").style.display = "none"
-        }
-        document.querySelector(".login").onclick = function () {
-            showLogin()
-        }
-    }
+    
 
 })(window);
