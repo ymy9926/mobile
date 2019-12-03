@@ -107,14 +107,14 @@ import logo from '../../images/header/move_headerlogo_03.png'
         this.style.display = "none"
         document.querySelector(".lg-icon-close").style.display = "inline-block"
         document.querySelector(".menu").style.display = "inline-block"
-        document.documentElement.style.overflow = "hidden"
+        document.body.style.overflow = "hidden"
     }
 
     document.querySelector(".lg-icon-close").onclick = function () {
         this.style.display = "none"
         document.querySelector(".lg-icon-menu").style.display = "inline-block"
         document.querySelector(".menu").style.display = "none"
-        document.documentElement.style.overflow = "scroll"
+        document.body.style.overflow = "scroll"
     }
 
     document.querySelector(".btn-login").onclick = showLogin;
