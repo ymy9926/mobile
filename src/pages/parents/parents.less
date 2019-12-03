@@ -26,41 +26,57 @@ header {
         background-image     : url('../../images/header/close.png');
     }
 
-    .lg-menu {
-        display   : block;
-        position  : fixed;
-        left      : 0;
-        top       : 1.6rem;
+    .menu {
         width     : 100%;
         height    : 150%;
+        position  : fixed;
+        left      : 0;
+        top       : 1.173333rem;
         z-index   : 1000;
-        text-align: center;
-        background: #fff;
-
-        li {
-            a {
-                font-size  : .426667rem;
-                display    : block;
-                height     : 50px;
-                line-height: 1.333333rem;
-                color      : #37384C;
+        background-image: url('../../images/common/menu-bg.png');
+        background-repeat:  no-repeat;
+        background-size: 100%;
+        .lg-menu {
+            display   : block;
+            width     : 100%;
+            height    : 100%;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+    
+            li {
+                a {
+                    font-size  : .426667rem;
+                    display    : block;
+                    height     : 50px;
+                    line-height: 1.333333rem;
+                    color      : #37384C;
+                }
             }
         }
+        .btn-box {
+            height  : 1.173333rem;
+            position: absolute;
+            left    : .4rem;
+            top  : 13.466667rem;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+    
+            .btn1 {
+                margin-right: .4rem;
+            }
+    
+            button {
+                width    : 4.4rem;
+                height   : 1.173333rem;
+                font-size: .373333rem;
+                color    : #56BECD;
+                background: #fff;
+                border-radius: .16rem;
+            }
+            }
     }
 
-    footer {
-        height  : 1.173333rem;
-        position: absolute;
-        left    : .4rem;
-        bottom  : .8rem;
-
-        button {
-            width    : 4.4rem;
-            height   : 1.173333rem;
-            font-size: .373333rem;
-            color    : #56BECD;
-        }
-    }
 
 }
 
