@@ -60,9 +60,9 @@ module.exports = [
     html: 'referfriend/referfriend.html',
     jsEntry: 'referfriend/referfriend.js'
   }, {
-    name: 'phone',
-    html: 'phone/phone.html',
-    jsEntry: 'phone/phone.js'
+    name: 'index',
+    html: 'index/index.html',
+    jsEntry: 'index/index.js'
   }, {
     name: 'contactus',
     html: 'contactus/contactus.html',
