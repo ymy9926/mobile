@@ -23,7 +23,7 @@ import logo from '../../images/header/move_headerlogo_03.png'
                         <li><a href="./studentexp.html">The Student Experience</a></li>
                         <li><a href="./teacher.html">LingoAce Teachers</a></li>
                         <li><a href="./difference.html">The LingoAce Difference</a></li>
-                        <li><a href="./parents.html">For Farents</a></li>
+                        <li><a href="./parents.html">For Parents</a></li>
                         <li><a href="./referfriend.html">Refer A Friend</a></li>
                         <li><a href="./login.html">Sign up</a></li>
                     </ul>
