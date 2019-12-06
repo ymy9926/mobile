@@ -100,17 +100,6 @@ import logo from '../../images/header/move_headerlogo_03.png'
 
     }
 
-    window.showRegister = function () {
-        document.querySelector(".masklogin").style.display = "block"
-        document.querySelector(".masklogin").innerHTML = registerhtml
-        document.querySelector(".close img").onclick = function () {
-            document.querySelector(".masklogin").style.display = "none"
-        }
-        document.querySelector(".login").onclick = function () {
-            showLogin()
-        }
-    }
-
     var isRememberUser = true
     // var url = window.location.pathname.join('/').
 
@@ -129,6 +118,11 @@ import logo from '../../images/header/move_headerlogo_03.png'
     }
 
     window.showRegister = function () {
+        if (location.pathname != '/mobile/login.html') {
+            window.location = "/mobile/login.html"
+            return 
+        }
+
         document.querySelector(".masklogin").style.display = "block"
         document.querySelector(".masklogin").innerHTML = registerhtml
         document.querySelector(".close img").onclick = function () {
@@ -145,6 +139,12 @@ import logo from '../../images/header/move_headerlogo_03.png'
     document.querySelector(".btn-register").onclick = showRegister;
 
     function showLogin() {
+        if (location.pathname != '/mobile/login.html') {
+            window.location = "/mobile/login.html"
+            return 
+        }
+
+
         document.querySelector(".masklogin").style.display = "block"
         document.querySelector(".masklogin").innerHTML = signinhtml
         document.querySelector(".close img").onclick = function () {
