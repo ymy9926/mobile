@@ -313,6 +313,23 @@ header {
     display   : flex;
     padding   : .173333rem .4rem;
 
+    .location {
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        >img {
+            width: .32rem;
+            height: .426667rem;
+            margin-right: .16rem;
+        }
+
+        span {
+            font-size: .32rem;
+            color: #777AAF;
+        }
+    }
+
     .logo {
         flex: 1;
 
@@ -556,5 +573,17 @@ header {
     iframe {
         height: 8rem !important;
         width : 100% !important;
+    }
+}
+
+.bottom-modal {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    >div {
+        height: 1.616rem;
+        background: #fff;
+        font-size: .426667rem;
+        line-height: 1.616rem;
     }
 }

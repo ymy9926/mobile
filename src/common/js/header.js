@@ -6,6 +6,7 @@ import no_remember from '../../images/header/remmber.png'
 import remember from '../../images/header/remmbersel.png'
 import logo from '../../images/header/move_headerlogo_03.png'
 
+
 (function (window) {
 
     var html = `<header>
@@ -34,35 +35,53 @@ import logo from '../../images/header/move_headerlogo_03.png'
     //登录
     var signinhtml = `
     <form class="masksign" action="https://member.lingoace.com/accounts/login/" method="POST" id="login" >
-    <p class="sgintitle"><span class="close"><img src="${close}" /></span><span>Login</span><span class="signup">Sign up</span></p>
-    <p class="emailipt"><input type="text" class="username"  name="login" placeholder="Username"><span class="emailtextnone"></span></p>
-    <p class="emailwrong">The account password is wrong or does not exist</p>
-    <p class="passwordipt"><input type="password" name="password" class="passwordinput passwordlogin" placeholder="Password"><img class="paswordnone" src="" alt=""></p>
-    <p class="passwordwrong">The account password is wrong or does not exist</p>
-    <div class="pasword">
-        <p>
-            <img class="paswordnone" src="${remember}" alt="">
-            <span>Remember me</span>
-        </p>
-            
-        <p class="forgotpassword"><a href="https://member.lingoace.com/accounts/password/reset/" target="_blank">Forgot Password?</a></p>
-    </div>
-    <button type="submit" class="loginbtn loginjump">Login</button>
+        <p class="sgintitle"><span class="close"><img src="${close}" /></span><span>Login</span><span class="signup">Sign up</span></p>
+        <p class="emailipt"><input type="text" class="username"  name="login" placeholder="Username"><span class="emailtextnone"></span></p>
+        <p class="emailwrong">The account password is wrong or does not exist</p>
+        <p class="passwordipt"><input type="password" name="password" class="passwordinput passwordlogin" placeholder="Password"><img class="paswordnone" src="" alt=""></p>
+        <p class="passwordwrong">The account password is wrong or does not exist</p>
+        <div class="pasword">
+            <p>
+                <img class="paswordnone" src="${remember}" alt="">
+                <span>Remember me</span>
+            </p>
+                
+            <p class="forgotpassword"><a href="https://member.lingoace.com/accounts/password/reset/" target="_blank">Forgot Password?</a></p>
+        </div>
+        <button type="submit" class="loginbtn loginjump">Login</button>
     </form>
     `
 
     //注册
     var registerhtml = `<form class="masksign" action="https://member.lingoace.com/accounts/signup/" id="signup_form" method="post">
-    <p class="sgintitle"><span class="close"><img src="${close}" /></span><span>Sign up</span><span class="login">Login</span></p>
-    <p class="usernameipt"><input type="text" class="username" name="username" placeholder="Username"><span class="emailtextnone usernamepic"></span></p>
-    <p class="emailipt"><input type="text" class="email" name="email" placeholder="Email"><span class="emailtextnone emailpic"></span></p>
-    <p class="passwordipt"><input class="passwordinput" type="password" name="password1" placeholder="Password"><img class="paswordnone" src="" alt=""></p>
-    <input type="hidden" name="password2" class="password2" />
-    <button type="submit" class="loginbtn registerbtn">Sign up</button>
-    <div class="gotomethod">
-        <span class="text">By Signing up,you hereby agree to</span><a href="./rule.html" class="jump Lawsandregulations"> LingoAce Course Agreement /Terms of Use</a href="./rule.html"><span class="text"> and </span><a href="./rule.html" class="jump Lawsandregulations">Privacy Policy</a href="./rule.html">
-    </div>
+        <p class="sgintitle"><span class="close"><img src="${close}" /></span><span>Sign up</span><span class="login">Login</span></p>
+        <p class="usernameipt"><input type="text" class="username" name="username" placeholder="Username"><span class="emailtextnone usernamepic"></span></p>
+        <p class="emailipt"><input type="text" class="email" name="email" placeholder="Email"><span class="emailtextnone emailpic"></span></p>
+        <p class="passwordipt"><input class="passwordinput" type="password" name="password1" placeholder="Password"><img class="paswordnone" src="" alt=""></p>
+        <input type="hidden" name="password2" class="password2" />
+        <button type="submit" class="loginbtn registerbtn">Sign up</button>
+        <div class="gotomethod">
+            <span class="text">By Signing up,you hereby agree to</span><a href="./rule.html" class="jump Lawsandregulations"> LingoAce Course Agreement /Terms of Use</a href="./rule.html"><span class="text"> and </span><a href="./rule.html" class="jump Lawsandregulations">Privacy Policy</a href="./rule.html">
+        </div>
     </form>`
+
+    //底部弹框
+    var bottomModal = `
+        <div class="bottom-modal">
+            <div class="bottom-item" id="international">
+                <div>
+                    <img src="" alt="">International - ENG
+                </div>
+                <img src="" alt="">
+            </div>
+            <div class="bottom-item" id="singapore">
+                <div>
+                    <img src="" alt="">Singapore -ENG
+                </div>
+                <img src="" alt="">
+            </div>
+        </div>
+    `
 
     var header = document.createElement('div');
     header.innerHTML = html;
@@ -101,7 +120,6 @@ import logo from '../../images/header/move_headerlogo_03.png'
     }
 
     var isRememberUser = true
-    // var url = window.location.pathname.join('/').
 
     document.querySelector(".lg-icon-menu").onclick = function () {
         this.style.display = "none"
@@ -133,11 +151,6 @@ import logo from '../../images/header/move_headerlogo_03.png'
         }
     }
 
-    // document.querySelector(".register").onclick = showRegister;
-
-    document.querySelector(".btn-login").onclick = showLogin;
-    document.querySelector(".btn-register").onclick = showRegister;
-
     function showLogin() {
         if (location.pathname != '/mobile/login.html') {
             window.location = "/mobile/login.html"
@@ -158,6 +171,14 @@ import logo from '../../images/header/move_headerlogo_03.png'
         }
 
     }
+
+    function showBottomModal() {
+        document.querySelector(".masklogin").style.display = "block"
+        document.querySelector(".masklogin").innerHTML = bottomModal
+    }
+
+    document.querySelector(".btn-login").onclick = showLogin;
+    document.querySelector(".btn-register").onclick = showRegister;
 
     var mo = function (e) { e.preventDefault(); };
     function stop() {
