@@ -10,7 +10,7 @@ import logo from '../../images/header/move_headerlogo_03.png'
 
     var html = `<header>
                     <div class="masklogin"></div>
-                    <a href="###" class="logo">
+                    <a href="./index.html" class="logo">
                         <img src="${logo}" alt="">
                     </a>
                     <i class="lg-icon lg-icon-menu"></i>
@@ -60,7 +60,7 @@ import logo from '../../images/header/move_headerlogo_03.png'
     <input type="hidden" name="password2" class="password2" />
     <button type="submit" class="loginbtn registerbtn">Sign up</button>
     <div class="gotomethod">
-        <span class="text">By Signing up,you hereby agree to</span><span class="jump Lawsandregulations"> LingoAce Course Agreement /Terms of Use</span><span class="text"> and </span><span class="jump Lawsandregulations">Privacy Policy</span>
+        <span class="text">By Signing up,you hereby agree to</span><a href="./rule.html" class="jump Lawsandregulations"> LingoAce Course Agreement /Terms of Use</a href="./rule.html"><span class="text"> and </span><a href="./rule.html" class="jump Lawsandregulations">Privacy Policy</a href="./rule.html">
     </div>
     </form>`
 
