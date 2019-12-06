@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <script>
+    var u = navigator.userAgent;
+    var isMobile = !!u.match(/AppleWebKit.*Mobile.*/);
+    if (!isMobile) {
+      location.pathname = "";
+    }
+  </script>
 </head>
+
 <body>
   <ul class="lg-layout">
     <li><img src="../../images/phone/phone_02.png" alt=""></li>
@@ -30,4 +39,5 @@
     </li>
   </ul>
 </body>
+
 </html>

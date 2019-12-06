@@ -33,7 +33,7 @@ import logo from '../../images/header/move_headerlogo_03.png'
                 </div>`;
     //登录
     var signinhtml = `
-    <form class="masksign" action="https://dev.pplingo.com/accounts/login/" method="POST" id="login" >
+    <form class="masksign" action="https://member.lingoace.com/accounts/login/" method="POST" id="login" >
     <p class="sgintitle"><span class="close"><img src="${close}" /></span><span>Login</span><span class="signup">Sign up</span></p>
     <p class="emailipt"><input type="text" class="username"  name="login" placeholder="Username"><span class="emailtextnone"></span></p>
     <p class="emailwrong">The account password is wrong or does not exist</p>
@@ -45,14 +45,14 @@ import logo from '../../images/header/move_headerlogo_03.png'
             <span>Remember me</span>
         </p>
             
-        <p class="forgotpassword"><a href="https://dev.pplingo.com/accounts/password/reset/" target="_blank">Forgot Password?</a></p>
+        <p class="forgotpassword"><a href="https://member.lingoace.com/accounts/password/reset/" target="_blank">Forgot Password?</a></p>
     </div>
     <button type="submit" class="loginbtn loginjump">Login</button>
     </form>
     `
 
     //注册
-    var registerhtml = `<form class="masksign" action="https://dev.pplingo.com/accounts/signup/" id="signup_form" method="post">
+    var registerhtml = `<form class="masksign" action="https://member.lingoace.com/accounts/signup/" id="signup_form" method="post">
     <p class="sgintitle"><span class="close"><img src="${close}" /></span><span>Sign up</span><span class="login">Login</span></p>
     <p class="usernameipt"><input type="text" class="username" name="username" placeholder="Username"><span class="emailtextnone usernamepic"></span></p>
     <p class="emailipt"><input type="text" class="email" name="email" placeholder="Email"><span class="emailtextnone emailpic"></span></p>
