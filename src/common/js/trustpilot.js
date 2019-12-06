@@ -1,3 +1,4 @@
+/* eslint-disable */
 (function() {
     var trustpilot = `
     <!-- TrustBox widget - Carousel -->
@@ -9,4 +10,4 @@
     trustpilotEle.attributes['class'] = 'trustpilot';
     trustpilotEle.innerHTML = trustpilot;
     document.body.appendChild(trustpilotEle);
-  })()
+})()
