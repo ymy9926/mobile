@@ -5,6 +5,9 @@ import close from '../../images/header/close.png'
 import no_remember from '../../images/header/remmber.png'
 import remember from '../../images/header/remmbersel.png'
 import logo from '../../images/header/move_headerlogo_03.png'
+import location from '../../images/header/location.png'
+import bottomLocation from '../../images/header/bottom_location.png'
+import jumpArrow from '../../images/header/jump-arrow.png'
 
 
 (function (window) {
@@ -14,6 +17,10 @@ import logo from '../../images/header/move_headerlogo_03.png'
                     <a href="./index.html" class="logo">
                         <img src="${logo}" alt="">
                     </a>
+                    <div class="location">
+                        <img src="${location}">
+                        <span>Singapore</span>
+                    </div>
                     <i class="lg-icon lg-icon-menu"></i>
                     <i class="lg-icon lg-icon-close"></i>
                 </header>
@@ -70,15 +77,15 @@ import logo from '../../images/header/move_headerlogo_03.png'
         <div class="bottom-modal">
             <div class="bottom-item" id="international">
                 <div>
-                    <img src="" alt="">International - ENG
+                    <img src="${bottomLocation}" alt="">International - ENG
                 </div>
-                <img src="" alt="">
+                <img src="${jumpArrow}" alt="">
             </div>
             <div class="bottom-item" id="singapore">
                 <div>
-                    <img src="" alt="">Singapore -ENG
+                    <img src="${bottomLocation}" alt="">Singapore -ENG
                 </div>
-                <img src="" alt="">
+                <img src="${jumpArrow}" alt="">
             </div>
         </div>
     `
@@ -173,12 +180,36 @@ import logo from '../../images/header/move_headerlogo_03.png'
     }
 
     function showBottomModal() {
+        stop()
         document.querySelector(".masklogin").style.display = "block"
         document.querySelector(".masklogin").innerHTML = bottomModal
+        document.querySelector(".bottom-modal").onclick = function(e) {
+            e.stopPropagation()
+        }
+        document.querySelector("#international").onclick = function() {
+            window.location = "https://www.lingoace.com"
+            return 
+        }
+        document.querySelector("#singapore").onclick = function() {
+            document.querySelector(".masklogin").style.display = "none"
+            move()
+        }
+        document.querySelectorAll(".bottom-item").forEach(function(item) {
+            item.addEventListener("touchstart", function() {
+                this.style.background = "#F4F4F4"
+            })
+            item.addEventListener("touchend", function() {
+                this.style.background = "#fff"
+            })
+        })
     }
 
     document.querySelector(".btn-login").onclick = showLogin;
     document.querySelector(".btn-register").onclick = showRegister;
+    document.querySelector(".location").onclick = showBottomModal
+    document.querySelector(".masklogin").onclick = function() {
+        this.style.display = "none"
+    }
 
     var mo = function (e) { e.preventDefault(); };
     function stop() {
