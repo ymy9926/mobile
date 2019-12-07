@@ -187,7 +187,7 @@ import jumpArrow from '../../images/header/jump-arrow.png'
             e.stopPropagation()
         }
         document.querySelector("#international").onclick = function() {
-            window.location = "https://www.lingoace.com"
+            window.location = "https://www.lingoace.com?from=sg"
             return 
         }
         document.querySelector("#singapore").onclick = function() {
