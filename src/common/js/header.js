@@ -33,10 +33,10 @@ import jumpArrow from '../../images/header/jump-arrow.png'
                         <li><a href="./difference.html">The LingoAce Difference</a></li>
                         <li><a href="./parents.html">For Parents</a></li>
                         <li><a href="./referfriend.html">Refer A Friend</a></li>
-                        <li><a href="./login.html">Sign up</a></li>
+                        <li><a href="./login.html">Register</a></li>
                     </ul>
                     <div class="btn-box">
-                        <button class="btn1 btn-login">LOGIN</button><button class="btn-register">REGISTER</button>
+                        <button class="btn1 btn-login">LOGIN</button><button class="btn-register">Sign up</button>
                     </div>
                 </div>`;
     //登录
@@ -83,7 +83,7 @@ import jumpArrow from '../../images/header/jump-arrow.png'
             </div>
             <div class="bottom-item" id="singapore">
                 <div>
-                    <img src="${bottomLocation}" alt="">Singapore -ENG
+                    <img src="${bottomLocation}" alt="">Singapore - ENG
                 </div>
                 <img src="${jumpArrow}" alt="">
             </div>
