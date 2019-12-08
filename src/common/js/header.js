@@ -143,40 +143,37 @@ import jumpArrow from '../../images/header/jump-arrow.png'
     }
 
     window.showRegister = function () {
-        if (location.pathname != '/mobile/login.html') {
+        if (window.location.pathname == "/mobile/login.html") {
+            document.querySelector(".masklogin").style.display = "block"
+            document.querySelector(".masklogin").innerHTML = registerhtml
+            document.querySelector(".close img").onclick = function () {
+                document.querySelector(".masklogin").style.display = "none"
+            }
+            document.querySelector(".login").onclick = function () {
+                showLogin()
+            }
+        } else {
             window.location = "/mobile/login.html"
-            return 
         }
 
-        document.querySelector(".masklogin").style.display = "block"
-        document.querySelector(".masklogin").innerHTML = registerhtml
-        document.querySelector(".close img").onclick = function () {
-            document.querySelector(".masklogin").style.display = "none"
-        }
-        document.querySelector(".login").onclick = function () {
-            showLogin()
-        }
     }
 
     function showLogin() {
-        if (location.pathname != '/mobile/login.html') {
+        if (window.location.pathname == "/mobile/login.html") {
+            document.querySelector(".masklogin").style.display = "block"
+            document.querySelector(".masklogin").innerHTML = signinhtml
+            document.querySelector(".close img").onclick = function () {
+                document.querySelector(".masklogin").style.display = "none"
+            }
+            document.querySelector(".signup").onclick = showRegister;
+
+            document.querySelector(".pasword p img").onclick = function () {
+                isRememberUser = !isRememberUser
+                isRememberUser ? this.setAttribute("src", remember) : this.setAttribute("src", no_remember)
+            }
+        } else {
             window.location = "/mobile/login.html"
-            return 
         }
-
-
-        document.querySelector(".masklogin").style.display = "block"
-        document.querySelector(".masklogin").innerHTML = signinhtml
-        document.querySelector(".close img").onclick = function () {
-            document.querySelector(".masklogin").style.display = "none"
-        }
-        document.querySelector(".signup").onclick = showRegister;
-
-        document.querySelector(".pasword p img").onclick = function () {
-            isRememberUser = !isRememberUser
-            isRememberUser ? this.setAttribute("src", remember) : this.setAttribute("src", no_remember)
-        }
-
     }
 
     function showBottomModal() {
