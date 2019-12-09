@@ -64,9 +64,9 @@ import jumpArrow from '../../images/header/jump-arrow.png'
         <p class="sgintitle"><span class="close"><img src="${close}" /></span><span>Sign up</span><span class="login">Login</span></p>
         <p class="usernameipt"><input type="text" class="username" name="username" placeholder="Username"><span class="emailtextnone usernamepic"></span></p>
         <p class="emailipt"><input type="text" class="email" name="email" placeholder="Email"><span class="emailtextnone emailpic"></span></p>
-        <p class="passwordipt"><input class="passwordinput" type="password" name="password1" placeholder="Password"><img class="paswordnone" src="" alt=""></p>
+        <p class="passwordipt"><input class="passwordinput register-password" type="password" name="password1" placeholder="Password"><img class="paswordnone" src="" alt=""></p>
         <input type="hidden" name="password2" class="password2" />
-        <button type="submit" class="loginbtn registerbtn">Sign up</button>
+        <span type="submit" class="loginbtn registerbtn register-btn">Sign up</span>
         <div class="gotomethod">
             <span class="text">By Signing up,you hereby agree to</span><a href="./rule.html" class="jump Lawsandregulations"> LingoAce Course Agreement /Terms of Use</a href="./rule.html"><span class="text"> and </span><a href="./rule.html" class="jump Lawsandregulations">Privacy Policy</a href="./rule.html">
         </div>
@@ -151,6 +151,10 @@ import jumpArrow from '../../images/header/jump-arrow.png'
             }
             document.querySelector(".login").onclick = function () {
                 showLogin()
+            }
+            document.querySelector(".register-btn").onclick = function() {
+                document.querySelector('.password2').value = document.querySelector('.register-password').value;
+                document.querySelector('#signup_form').submit();
             }
         } else {
             window.location = "/mobile/login.html"
