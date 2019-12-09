@@ -204,9 +204,6 @@ import jumpArrow from '../../images/header/jump-arrow.png'
     document.querySelector(".btn-login").onclick = showLogin;
     document.querySelector(".btn-register").onclick = showRegister;
     document.querySelector(".location").onclick = showBottomModal
-    document.querySelector(".masklogin").onclick = function() {
-        this.style.display = "none"
-    }
 
     var mo = function (e) { e.preventDefault(); };
     function stop() {
